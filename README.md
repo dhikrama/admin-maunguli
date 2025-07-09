@@ -10,7 +10,7 @@ I just Modified it [https://indexedev.com](https://indexedev.com)
 
 ## Installation
 
-### 1. Create OAuth application at Github
+### 1. Create OAuth application at Githu
 
 Go to Settings -> Developer Settings and choose [OAuth Apps](https://github.com/settings/developers). Create a new OAuth App. Name it anything you like. **Homepage URL** should be set to your site’s URL. **Authorization callback URL** is the important part; it, too, can be set to your homepage URL (like `https://indexedev.com`). Other guides say to set this to the callback API endpoint, but the documented requirement is that the callback URL be a subdirectory of this URL, and using the callback URL itself didn’t work for me.
 
