@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ernocobain/admin-maunguli
   branch: main # Branch to update (optional; defaults to master)
-  base_url: https://b6edfac0.admin-9sw.pages.dev
+  base_url: https://admin-9sw.pages.dev
   auth_endpoint: /api/auth
   client_id: Ov23liHzwqF9BbLEdz5A
 media_folder: static/img
