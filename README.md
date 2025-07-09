@@ -33,3 +33,4 @@ The config file included here is a starter file only; you need to set this up fo
 Publish your site and let Cloudflare build it. Go to `/admin/` on your site, and you should see a Login with Github button, which should authenticate you to Github and launch the CMS.
 
 
+# admin-maunguli

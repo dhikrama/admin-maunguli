@@ -1,21 +1,32 @@
 backend:
   name: github
-  repo: username/repo
+  repo: ernocobain/admin-maunguli
   branch: main # Branch to update (optional; defaults to master)
-  base_url: https://example.com
+  base_url: admin.maunguli.com
   auth_endpoint: /api/auth
 media_folder: static/img
 public_folder: /img
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "src/content/posts"
     create: true
-    slug: '{{slug}}'
-    editor:
-      preview: false
+    slug: "{{slug}}"
+    format: "frontmatter"
+    extension: "md"
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "pubDate", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", default: "Tim Maunguli" }
+      - { label: "Category", name: "category", widget: "string" }
+      - label: "Image"
+        name: "image"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Image URL", name: "url", widget: "image" }
+          - { label: "Alt Text", name: "alt", widget: "string" }
+      - { label: "YouTube ID", name: "youtubeId", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
