@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: ernocobain/admin-maunguli
+  repo: dhikrama/admin-maunguli
   branch: main # Branch to update (optional; defaults to master)
   base_url: https://admin-9sw.pages.dev
   auth_endpoint: /api/auth
