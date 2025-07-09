@@ -44,27 +44,31 @@ export async function onRequest(context) {
                 body: JSON.stringify({ client_id, client_secret, code }),
             },
         );
+
         const result = await response.json();
         if (result.error) {
             return new Response(renderBody('error', result), {
                 headers: {
                     'content-type': 'text/html;charset=UTF-8',
                 },
-                status: 401 
+                status: 401
             });
         }
+        console.log("client_id:", client_id);
+        console.log("client_secret:", client_secret);
         const token = result.access_token;
         const provider = 'github';
         const responseBody = renderBody('success', {
             token,
             provider,
         });
-        return new Response(responseBody, { 
+        return new Response(responseBody, {
             headers: {
                 'content-type': 'text/html;charset=UTF-8',
             },
-            status: 200 
+            status: 200
         });
+
 
     } catch (error) {
         console.error(error);
